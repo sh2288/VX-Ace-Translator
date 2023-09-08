@@ -190,8 +190,8 @@ class RVData2Decompiler
   # Instance of RPG::Map class
   def decompile_map(filename)
 
-    Dir.mkdir(join(@output_path, 'Maps')) unless Dir.exist?(join(@output_path, 'Maps'))
-    File.open(join(@output_path, 'Maps', "#{filename}.txt"), 'w:UTF-8') do |map_file|
+    Dir.mkdir(join(@output_path)) unless Dir.exist?(join(@output_path))
+    File.open(join(@output_path, "#{filename}.txt"), 'w:UTF-8') do |map_file|
       map_file.write("Display Name = #{textualize(@rvdata2_data.display_name)}\n")
       map_file.write("Parallax Name = #{textualize(@rvdata2_data.parallax_name)}\n")
       map_file.write("Note = #{textualize(@rvdata2_data.note)}\n\n")
@@ -321,9 +321,9 @@ class RVData2Decompiler
       system_file.write("Battler Name = #{textualize(@rvdata2_data.battler_name)}\n")
     end
 
-    Dir.mkdir(join(@output_path, 'System')) unless Dir.exist?(join(@output_path, 'System'))
+    Dir.mkdir(join(@output_path)) unless Dir.exist?(join(@output_path))
 
-    File.open(join(@output_path, 'System', 'Elements.txt'), 'w:UTF-8') do |elements_file|
+    File.open(join(@output_path, 'Elements.txt'), 'w:UTF-8') do |elements_file|
 
       @rvdata2_data.elements[0..-2].each do |element|
         next if element.nil?
@@ -333,7 +333,7 @@ class RVData2Decompiler
       elements_file.write(textualize(@rvdata2_data.elements[-1]))
     end
 
-    File.open(join(@output_path, 'System', 'Skill Types.txt'), 'w:UTF-8') do |skill_types_file|
+    File.open(join(@output_path, 'Skill Types.txt'), 'w:UTF-8') do |skill_types_file|
 
       @rvdata2_data.skill_types[0..-2].each do |skill_type|
         next if skill_type.nil?
@@ -343,7 +343,7 @@ class RVData2Decompiler
       skill_types_file.write(textualize(@rvdata2_data.skill_types[-1]))
     end
 
-    File.open(join(@output_path, 'System', 'Weapon Types.txt'), 'w:UTF-8') do |weapon_types_file|
+    File.open(join(@output_path, 'Weapon Types.txt'), 'w:UTF-8') do |weapon_types_file|
 
       @rvdata2_data.weapon_types[0..-2].each do |weapon_type|
         next if weapon_type.nil?
@@ -353,7 +353,7 @@ class RVData2Decompiler
       weapon_types_file.write(textualize(@rvdata2_data.weapon_types[-1]))
     end
 
-    File.open(join(@output_path, 'System', 'Armor Types.txt'), 'w:UTF-8') do |armor_types_file|
+    File.open(join(@output_path, 'Armor Types.txt'), 'w:UTF-8') do |armor_types_file|
 
       @rvdata2_data.armor_types[0..-2].each do |armor_type|
         next if armor_type.nil?
@@ -363,7 +363,7 @@ class RVData2Decompiler
       armor_types_file.write(textualize(@rvdata2_data.armor_types[-1]))
     end
 
-    File.open(join(@output_path, 'System', 'Switches.txt'), 'w:UTF-8') do |switches_file|
+    File.open(join(@output_path, 'Switches.txt'), 'w:UTF-8') do |switches_file|
 
       @rvdata2_data.switches[0..-2].each do |switch|
         next if switch.nil?
@@ -373,7 +373,7 @@ class RVData2Decompiler
       switches_file.write(textualize(@rvdata2_data.switches[-1]))
     end
 
-    File.open(join(@output_path, 'System', 'Variables.txt'), 'w:UTF-8') do |variables_file|
+    File.open(join(@output_path, 'Variables.txt'), 'w:UTF-8') do |variables_file|
 
       @rvdata2_data.variables[0..-2].each do |variable|
         next if variable.nil?
@@ -383,7 +383,7 @@ class RVData2Decompiler
       variables_file.write(textualize(@rvdata2_data.variables[-1]))
     end
 
-    File.open(join(@output_path, 'System', 'Terms.txt'), 'w:UTF-8') do |terms_file|
+    File.open(join(@output_path, 'Terms.txt'), 'w:UTF-8') do |terms_file|
       basic = @rvdata2_data.terms.basic
 
       terms_file.write("Basic\n")
