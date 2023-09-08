@@ -1,5 +1,6 @@
 # Fork 自 [AhmedAhmedEG/VX-Ace-Translator](https://github.com/AhmedAhmedEG/VX-Ace-Translator)
 #### 重新编译VX-Ace-Translator命令行工具,使导出的文本位于同一目录,方便翻译汉化后的替换(原始工具,导出的文本分别放在3个目录...)
+---
 # Description
 Efficient translator for RPG Maker VX Ace games, fully written in Ruby, that can decompile all .rvdata2 files that are text-related to a readable text files and vice-versa.
 
