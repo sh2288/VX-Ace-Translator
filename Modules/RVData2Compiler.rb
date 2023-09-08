@@ -215,7 +215,7 @@ class RVData2Compiler
 
   def compile_map(path, file_basename)
 
-    File.open(join(path, 'Maps', "#{file_basename}.txt"), 'r:UTF-8') do |map_file|
+    File.open(join(path, "#{file_basename}.txt"), 'r:UTF-8') do |map_file|
       event_ind = 0
       page_ind = 0
 
@@ -372,7 +372,7 @@ class RVData2Compiler
 
     end
 
-    File.open(join(path, 'System', 'Elements.txt'), 'r:UTF-8') do |elements_file|
+    File.open(join(path, 'Elements.txt'), 'r:UTF-8') do |elements_file|
       offset = @metadata.elements[0].nil? ? 1 : 0
 
       elements_file.each_line.with_index do |line, i|
@@ -381,7 +381,7 @@ class RVData2Compiler
 
     end
 
-    File.open(join(path, 'System', 'Skill Types.txt'), 'r:UTF-8') do |skill_types_file|
+    File.open(join(path, 'Skill Types.txt'), 'r:UTF-8') do |skill_types_file|
       offset = @metadata.skill_types[0].nil? ? 1 : 0
 
       skill_types_file.each_line.with_index do |line, i|
@@ -390,7 +390,7 @@ class RVData2Compiler
 
     end
 
-    File.open(join(path, 'System', 'Weapon Types.txt'), 'r:UTF-8') do |weapon_types_file|
+    File.open(join(path, 'Weapon Types.txt'), 'r:UTF-8') do |weapon_types_file|
       offset = @metadata.weapon_types[0].nil? ? 1 : 0
 
       weapon_types_file.each_line.with_index do |line, i|
@@ -399,7 +399,7 @@ class RVData2Compiler
 
     end
 
-    File.open(join(path, 'System', 'Armor Types.txt'), 'r:UTF-8') do |armor_types_file|
+    File.open(join(path, 'Armor Types.txt'), 'r:UTF-8') do |armor_types_file|
       offset = @metadata.armor_types[0].nil? ? 1 : 0
 
       armor_types_file.each_line.with_index do |line, i|
@@ -408,7 +408,7 @@ class RVData2Compiler
 
     end
 
-    File.open(join(path, 'System', 'Switches.txt'), 'r:UTF-8') do |switches_file|
+    File.open(join(path, 'Switches.txt'), 'r:UTF-8') do |switches_file|
       offset = @metadata.switches[0].nil? ? 1 : 0
 
       switches_file.each_line.with_index do |line, i|
@@ -417,7 +417,7 @@ class RVData2Compiler
 
     end
 
-    File.open(join(path, 'System', 'Variables.txt'), 'r:UTF-8') do |variables_file|
+    File.open(join(path, 'Variables.txt'), 'r:UTF-8') do |variables_file|
       offset = @metadata.variables[0].nil? ? 1 : 0
 
       variables_file.each_line.with_index do |line, i|
@@ -426,7 +426,7 @@ class RVData2Compiler
 
     end
 
-    File.open(join(path, 'System', 'Terms.txt'), 'r:UTF-8') do |terms_file|
+    File.open(join(path, 'Terms.txt'), 'r:UTF-8') do |terms_file|
       values = []
 
       terms_file.each_line do |line|
